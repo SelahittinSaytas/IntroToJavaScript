@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<title>Calling A Function From Another Function</title>
+	</head>
+	<body>
+
+	<script type="text/javascript">
+		function doFirst() {
+			document.write("I am first bro!" + "<br/>");
+		}
+
+		function doSecond() {
+			document.write("I am second bro!" + "<br/>");
+		}
+
+		function start() {
+			doFirst();
+			doSecond();
+		}
+
+		start();
+
+
+		// This is endless loop
+		/*
+		function doFirst() {
+			document.write(" First! ");
+			doSecond();
+		}
+
+		function doSecond() {
+			document.write(" Second! ");
+			doFirst();
+		}
+
+		doFirst();
+		*/
+
+	</script>
+	</body>
+</html>

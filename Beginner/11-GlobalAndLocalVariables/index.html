@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<title>Global and Local Variables</title>
+	</head>
+	<body>
+
+	<script type="text/javascript">
+		
+		//Global Variable
+		var girl = "Kelsey";
+
+		function spit() {
+			document.write(girl + "<br/>");
+		}
+
+		spit(); // Worked
+		document.write(girl + "<br/>"); // Worked
+
+
+
+		//Local Variable
+		function anotherSpit() {
+			var anotherGirl = "Another Kelsey";
+			document.write(anotherGirl + "<br/>");
+		}
+
+		anotherSpit(); // Worked
+		document.write(anotherGirl + "<br/>"); // Not Worked
+
+
+	</script>
+	</body>
+</html>
