@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<title>Adding Methods To Our Objects</title>
+		<!-- Scripts -->
+		<script type="text/javascript">
+
+			// There are two different ways to create objects:
+			// Constructor Function and Object Initializers
+			// Obect initializer is a lot faster than constructor function because it is only one line of code as opposed to a whole function and than creating the object. It pretty much takes everything and squishes it together in one line
+
+			// Constructor function: to create 500 person objects
+				//Firstly, create a function
+				//Secondly, create a new instance of an object
+
+			// Object initializers: to create one or two objects of the same type
+
+			// A method pretty much a function that uses some of the properties to calculate things by taking some of the properties by the object and makes the calculation, for example, when was Natalie born or is she going to be retired
+
+			// Creating a new instance of an object
+
+			function people(name, age) {
+				this.name = name;
+				this.age = age;
+				this.yearsUntilRetirement = yearsLeft;
+			}
+
+			function yearsLeft(){
+				var numYears = 65 - this.age;
+				return numYears;
+			}
+
+			// Creating a new instance of an object
+
+			var natalie = new people("Natalie Portman", 28);
+			var selahittin = new people("Selahittin Saytas", 26);
+			var bucky = new people("Bucky Roberts", 24);
+
+		</script>
+	</head>
+	<body>
+
+	<script type="text/javascript">
+
+		// Object name with the dot "." separator and you can either write variables or properties right here OR the functions or methods right there
+		// Object + . + variable/property / function/method
+
+		document.write(natalie.yearsUntilRetirement() + "<br/>");
+		document.write(selahittin.yearsUntilRetirement() + "<br/>");
+		document.write(bucky.yearsUntilRetirement() + "<br/>");
+
+	</script>
+
+	</body>
+</html>
