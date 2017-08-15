@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 	<html lang="en">
 	<head>
-		<title>Join And Pop</title>
+		<title>Add Array Elements Using A Loop - Prompt</title>
 		<!-- Scripts -->
 		<script type="text/javascript">
 
@@ -29,19 +29,20 @@
 		// Object + . + variable/property / function/method
 
 
-		// To convert an Array into a String use join() method
+		/*
+		var pie = prompt("Enter Your Name: ", ""); // A '.prompt()' box gives a user dialog such as enter your name and by default if you leave the second parameter empty just double quotation marks nothing is gonna be appearing
+		document.write("Hello " + pie);
+		*/
 
-		var favouriteMovies = new Array("Avatar", "Good Will Hunting", "Vanilla Sky", "Fight Club");
+		// THE MOST COMMON TECHNIQUE IS THAT USE THE ARRAY INDEX AS THE LOOP COUNTER - THAT IS VERY POPULAR TEHNIQUE
 
-		var string1 = favouriteMovies.join(" - "); // join() is a method
+		var crap = new Array(3);
 
-		document.write(string1 + "<br/>");
+		for(loopCounter_position_index = 0; loopCounter_position_index < 3; loopCounter_position_index++){
+			crap[loopCounter_position_index] = prompt("Add Something to the Array!", "");
+		}
 
-		// To remove the last element from an Array use pop() method
-
-		document.write(favouriteMovies[3] + "<br/>");
-		favouriteMovies.pop();
-		document.write(favouriteMovies[3] + "<br/>");
+		document.write(crap[0] + " " + crap[1] + " " + crap[2]);
 
 	</script>
 

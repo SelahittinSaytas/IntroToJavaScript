@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 	<html lang="en">
 	<head>
-		<title>Creating Our Own Objects</title>
+		<title>Math Objects</title>
 		<!-- Scripts -->
 		<script type="text/javascript">
 
@@ -17,16 +17,7 @@
 
 			// A method pretty much a function that uses some of the properties to calculate things by taking some of the properties by the object and makes the calculation, for example, when was Natalie born or is she going to be retired
 
-			function person(name, age){
-				this.name = name;
-				this.age = age;
-			}
-
-			//Creating a new instance of an object
-
-			var bucky = new person("Bucky Roberts", 26);
-			var taylor = new person("Taylor Swift", 20);
-			var Selahittin = new person("Selahittin Saytas", 26);
+			// Creating a new instance of an object
 
 		</script>
 	</head>
@@ -37,9 +28,23 @@
 		// Object name with the dot "." separator and you can either write variables or properties right here OR the functions or methods right there
 		// Object + . + variable/property / function/method
 
-		document.write(Selahittin.name + " " +  Selahittin.age + "<br/>");
-		document.write(taylor.name + " " + taylor.age + "<br/>");
-		document.write(bucky.name + " " + bucky.age + "<br/>");
+
+		/*
+		var pie = prompt("Enter Your Name: ", ""); // A '.prompt()' box gives a user dialog such as enter your name and by default if you leave the second parameter empty just double quotation marks nothing is gonna be appearing
+		document.write("Hello " + pie);
+		*/
+
+		// THE MOST COMMON TECHNIQUE IS THAT USE THE 'ARRAY INDEX' AS THE 'LOOP COUNTER' - THAT IS VERY POPULAR TEHNIQUE
+
+		document.write(Math.PI + "<br/>"); // Properties of the 'math.' objects in JavaScript are basically values that have mathematical meaning
+		document.write(Math.E + "<br/>");
+
+		var n = prompt("Enter A Number", "");
+		var answer = Math.sqrt(n); // 'Math.sqrt()' method is used to find the square root of a number
+
+		alert("The square root of " + n + " is " + answer);
+
+
 
 	</script>
 

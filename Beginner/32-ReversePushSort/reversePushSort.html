@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 	<html lang="en">
 	<head>
-		<title>Creating Our Own Objects</title>
+		<title>Reverse, Push, and Sort</title>
 		<!-- Scripts -->
 		<script type="text/javascript">
 
@@ -17,16 +17,7 @@
 
 			// A method pretty much a function that uses some of the properties to calculate things by taking some of the properties by the object and makes the calculation, for example, when was Natalie born or is she going to be retired
 
-			function person(name, age){
-				this.name = name;
-				this.age = age;
-			}
-
-			//Creating a new instance of an object
-
-			var bucky = new person("Bucky Roberts", 26);
-			var taylor = new person("Taylor Swift", 20);
-			var Selahittin = new person("Selahittin Saytas", 26);
+			// Creating a new instance of an object
 
 		</script>
 	</head>
@@ -37,9 +28,15 @@
 		// Object name with the dot "." separator and you can either write variables or properties right here OR the functions or methods right there
 		// Object + . + variable/property / function/method
 
-		document.write(Selahittin.name + " " +  Selahittin.age + "<br/>");
-		document.write(taylor.name + " " + taylor.age + "<br/>");
-		document.write(bucky.name + " " + bucky.age + "<br/>");
+
+		var bodyParts = new Array("Head", "Shoulders", "Knees", "Toes");
+
+		bodyParts.reverse(); // '.reverse()' method is used to reverse the order of the list
+		bodyParts.push("Tounge", "Liver", "Eyes"); // '.push()' method is used to add more element to the list
+		bodyParts.sort(); // '.sort()' takes all the elements in an array and sorts them in alphabetical order no matter what you did before, regardless of anything
+
+		var string1 = bodyParts.join(", "); // '.join' method is used to convert an Array into a String and separated by a comma
+		document.write(string1);
 
 	</script>
 

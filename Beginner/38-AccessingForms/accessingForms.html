@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<title>Accessing Forms</title>
+		<!-- Scripts -->
+		<script type="text/javascript">
+
+		</script>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+	<body>
+
+	<div class="container">
+
+		<form class="form-horizontal" action="#" method="get"> <!-- form-inline -->
+			<div class="form-group">
+				<label id="userNameLabel" name="userName" for="u">Username: </label>
+				<input id="userName" type="text" name="userName" class="form-control" />
+			</div>
+			<div class="form-group">
+				<label id="passwordLabel" name="password" for="password">Password:</label>
+				<input id="password" type="password" name="password" class="form-control" />
+			</div>
+			<div class="form-group">
+				<input id="submit" type="submit" name="submit" value="SUBMIT" />
+			</div>
+		</form>
+
+	</div>
+
+	<script type="text/javascript">
+		
+		var x = document.forms[0].length;
+		document.write(x);
+		console.log(x);
+		
+	</script>
+
+	</body>
+</html>

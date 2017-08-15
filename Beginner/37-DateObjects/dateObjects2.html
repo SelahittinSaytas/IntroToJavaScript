@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 	<html lang="en">
 	<head>
-		<title>Adding Methods To Our Objects</title>
+		<title>Date Objects 2</title>
 		<!-- Scripts -->
 		<script type="text/javascript">
 
@@ -17,22 +17,7 @@
 
 			// A method pretty much a function that uses some of the properties to calculate things by taking some of the properties by the object and makes the calculation, for example, when was Natalie born or is she going to be retired
 
-			function people(name, age) {
-				this.name = name;
-				this.age = age;
-				this.yearsUntilRetirement = yearsLeft;
-			}
-
-			function yearsLeft(){
-				var numYears = 65 - this.age;
-				return numYears;
-			}
-
 			// Creating a new instance of an object
-
-			var natalie = new people("Natalie Portman", 28);
-			var selahittin = new people("Selahittin Saytas", 26);
-			var bucky = new people("Bucky Roberts", 24);
 
 		</script>
 	</head>
@@ -43,9 +28,30 @@
 		// Object name with the dot "." separator and you can either write variables or properties right here OR the functions or methods right there
 		// Object + . + variable/property / function/method
 
-		document.write(natalie.yearsUntilRetirement() + "<br/>");
-		document.write(selahittin.yearsUntilRetirement() + "<br/>");
-		document.write(bucky.yearsUntilRetirement() + "<br/>");
+
+		/*
+		var pie = prompt("Enter Your Name: ", ""); // A '.prompt()' box gives a user dialog such as enter your name and by default if you leave the second parameter empty just double quotation marks nothing is gonna be appearing
+		document.write("Hello " + pie);
+		*/
+
+		// THE MOST COMMON TECHNIQUE IS THAT USE THE 'ARRAY INDEX' AS THE 'LOOP COUNTER' - THAT IS VERY POPULAR TEHNIQUE
+
+		// The set interval function runs a function, however, much time you want to increment it by for example you can run a function every second or every 5 seconds
+		// Set interval function is a special function
+
+		function printTime() {
+			var now = new Date();
+			var hours = now.getHours();
+			var minutes = now.getMinutes();
+			var seconds = now.getSeconds();
+
+			document.write(hours + ":" + minutes + ":" + seconds + "<br/>");
+		}
+
+		setInterval("printTime()", 1000);
+
+		// 'setInterval();' takes 2 parameters. The first parameter it takes is what function do you want to run, and the second parameter is the increment you wanna run in and this is in milliseconds, so if you write 1000 milliseconds this means one second
+
 
 	</script>
 

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<title>Accessing Form Elements</title>
+		<!-- Scripts -->
+		<script type="text/javascript">
+
+		</script>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+	<body>
+
+	<div class="container">
+
+		<form name="buckysForm" class="form-horizontal" action="#" method="get"> <!-- form-inline -->
+			<div class="form-group">
+				<label id="userNameLabel" name="username" for="u">Username: </label>
+				<input class="form-control" id="username" type="text" name="username" />
+			</div>
+			<div class="form-group">
+				<label id="passwordLabel" name="password" for="password">Password:</label>
+				<input class="form-control" id="password" type="password" name="password" />
+			</div>
+			<div class="form-group">
+				<input class="form-control" id="submit" type="submit" name="submit" value="SUBMIT" />
+			</div>
+		</form>
+
+	</div>
+
+	<script type="text/javascript">
+
+		// In order to access each individual element in the forms array,
+		// we can either use the element array simple enough,
+		// element and then the name of whatever the number of element you want to use
+		// or if it has a name we can use that as well 
+		
+		// var x = document.forms[0].elements[0].name;
+		// var x = document.buckysForm.elements[0].name;
+		var x = document.buckysForm.username.name;
+
+		var y = document.forms[0].elements[1].name;
+		var z = document.forms[0].elements[2].name;
+
+		document.write(x + "<br/>");
+		console.log(x + "<br/>");
+		document.write(y + "<br/>");
+		console.log(y + "<br/>");
+		document.write(z + "<br/>");
+		console.log(z + "<br/>");
+
+	</script>
+
+	</body>
+</html>
