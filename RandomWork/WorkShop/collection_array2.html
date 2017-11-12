@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Collection Array 2</title>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+			
+			var fruits = ["Kiwi", "Rambutan", "Mango", "Tomato"];
+
+			fruits.pop();
+			fruits.push("Gooseberry");
+			fruits.shift();
+			fruits.unshift("Banana");
+			fruits.slice(0, 2);
+			fruits.splice(0, 2);
+			fruits[fruits.length] = "Blueberry";
+			fruits[2] = "Pineapple";
+			fruits[5] = "Dragonfruit";
+			fruits.sort();
+			
+
+			document.write(fruits.join(", "));
+
+		</script>
+
+	</body>
+</html>

@@ -1,23 +1,29 @@
 // 5 - This
 
+// "this." refers to the thing that called it
+
 // In Node, everything is a reference
 // Object initializers 'bucky = {name:"Bucky", surname:"Roberts", age:27};'
 
 // 'Bucky' is an object, 'favoriteFood', 'favoriteDrink', and 'favoriteMovie' are properties
 
 var Bucky = {
-	favoriteFood: "Bacon",
-	favoriteDrink: "Beer",
-	favoriteMovie: "Chappie"
+	printFirstName: function(){
+		console.log("My name is Bucky");
+		console.log(this === Bucky); // true - ".this" is just reference to whatever thing or whatever object is calling it
+	}
 };
 
-var Person = Bucky;
-Person.favoriteFood = "Salad";
+// "this." keyword is just a reference to whatever thing is calling it
+Bucky.printFirstName(); // "Bucky" is calling "printFirstName"
 
-console.log(Bucky.favoriteFood);
+// The default calling context is global
+function doSomethingWorthless(){
+	console.log("\nI am worthless!");
+	console.log(this === global);
+}
 
-// Whenever you use the 2 equal signs, it only compares the value
-console.log(19 == "19"); // true
+doSomethingWorthless();
 
-// 3 equal signs (Stricly equal sign) compares the value and the types (String or Integer)
-console.log(19 === "19"); // false
+// Since "doSomethingWorthless" function is not being called by an object (being called by the main program)
+// well that refers to global so that's why whenever we test above code, this is equal to global

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Array - Musical Scale</title>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+			
+			var scale = ["Do", "Re", "Mi", "Fa", "So", "La", "Ti", "Do"];
+
+			for(var loopCounterPosition = 0; loopCounterPosition < scale.length; loopCounterPosition++){
+				console.log(scale[loopCounterPosition]);
+			}
+
+			var scaleDescriptions = [
+			"A deer - a female deer",
+			"A drop of golden sun",
+			"A name I call myself",
+			"A long, long way to run",
+			"A needle pulling thread",
+			"A note to follow so",
+			"A drink with jam and bread",
+			];
+
+			console.log("When you know the notes to sing \nyou can sing most anything!");
+
+			for(var loopCounter = 0; loopCounter < scale.length; loopCounter++){
+				if(loopCounter == (scale.length -1)){
+					console.log("That will bring us back to " + scale[loopCounter]);
+				}else{
+					console.log(scale[loopCounter] + " - " + scaleDescriptions[loopCounter]);
+				}
+			}
+
+		</script>
+
+	</body>
+</html>

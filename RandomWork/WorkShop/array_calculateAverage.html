@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Array - Calculate Average</title>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+			
+			var averageTemperature = [70, 55, 65, 55, 55, 60, 70];
+
+			function calculateAverageTemperature(temperatureArray){
+
+				var sumOfTemperatures = 0;
+
+				for(var loopCounter = 0; loopCounter < temperatureArray.length; loopCounter++){
+					sumOfTemperatures += temperatureArray[loopCounter];
+				}
+				return sumOfTemperatures / temperatureArray.length;
+			}
+
+			document.write("Cleveland's average temperature is: ");
+			console.log("Cleveland's average temperature is: ");
+			document.write(calculateAverageTemperature(averageTemperature));
+			console.log(calculateAverageTemperature(averageTemperature));
+
+		</script>
+
+	</body>
+</html>

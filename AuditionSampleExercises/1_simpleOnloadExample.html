@@ -31,16 +31,18 @@
 		var endingNumber = prompt("Enter an ending number:", "");
 		var stepValue = prompt("Enter a step value:", "");
 
-		function displayEvents() {
+		function displayEvens() {
 
 			var evenNumbers = 0;
 
 			for(var startingNumber; startingNumber < endingNumber; stepValue++){
 				if(startingNumber % 2 == 0){
-					console.log(evenNumbers);
+					console.log(evenNumbers.push());
 					evenNumbers++;
 				}
 			}
+
+			return evenNumbers.join(", ");
 		}
 
 		console.log(displayEvents());

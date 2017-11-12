@@ -22,24 +22,27 @@
 	<div class="container">
 
 		<form name="buckysForm" class="form-horizontal" > <!-- form-inline -->
+			<h1>This is a form</h1>
 			<div class="contact-form">
 				<div class="form-group">
-					<label class="control-label col-sm-4" id="userNameLabel" name="username" for="u">Username: </label>
-					<input class="form-control col-sm-4" id="username" type="text" name="username" />
+					<label class="control-label col-sm-2" id="userNameLabel" name="username" for="u">Username: </label>
+					<div class="col-sm-4">
+						<input class="form-control col-sm-4" id="username" type="text" name="username" />
+					</div>
 				</div>
 				<div class="form-group">
-					<label class="control-label col-sm-4" id="passwordLabel" name="password" for="password">Password:</label>
-					<input class="form-control col-sm-4" id="password" type="password" name="password" />
+					<label class="control-label col-sm-2" id="passwordLabel" name="password" for="password">Password:</label>
+					<div class="col-sm-4">
+						<input class="form-control col-sm-4" id="password" type="password" name="password" />
+					</div>
 				</div>
 				<div class="form-group">
-					<input class="form-control col-sm-4" id="submit" type="submit" name="submit" value="SUBMIT" onclick="requireInfo();" />
+					<input class="btn btn-default" id="submit" type="submit" name="submit" value="SUBMIT" onclick="requireInfo();" />
 				</div>
-				<div class="checkbox">
-					<label class="checkbox-inline col-sm-4" id="theBoxLabel" name="theBox" for="theBox">Check The Box:</label>
-					<input class="form-control col-sm-4" id="theBox" type="checkbox" name="theBox" />
-				</div>
-				<div class="input-group">
-					<input class="form-control col-sm-4" type="button" name="pressMe" value="PRESS ME" onclick="validator();" />
+				<div>
+					<label class="checkbox-inline" id="theBoxLabel" name="theBox" for="theBox">Check The Box:</label>
+					<input class="form-control" id="theBox" type="checkbox" name="theBox" />
+					<input class="btn" type="button" name="pressMe" value="PRESS ME" onclick="validator();" />
 				</div>
 			</div>
 		</form>

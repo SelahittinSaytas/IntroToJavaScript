@@ -28,28 +28,34 @@ function toFindEven(startingNumber, endingNumber, stepNumber){
 
 function validateItems(){
 	clearErrors();
-	toFindEven();
+
+	/*
+	The parseInt() function parses a string and returns an integer.
+	The radix parameter is used to specify which numeral system to be used,
+	for example, a radix of 16 (hexadecimal) indicates that the number in the string
+	should be parsed from a hexadecimal number to a decimal number.
+	*/
 
 	var startingNumber = parseInt(document.forms["myForm"]["startingNumber"].value);
 	var endingNumber = parseInt(document.forms["myForm"]["endingNumber"].value);
 	var stepNumber = parseInt(document.forms["myForm"]["stepNumber"].value);
 
 	if(startingNumber == "" || isNaN(startingNumber)){
-		alert("Starting Number must be filled with a numeric value!");
+		alert("Starting Number must be filled in with a numeric value!");
 		document.forms["myForm"]["startingNumber"].parentElement.className = "form-group has-error";
 		document.forms["myForm"]["startingNumber"].focus();
 		return false;
 	}
 
 	if(endingNumber == "" || isNaN(endingNumber) || endingNumber <= startingNumber){
-		alert("Ending Number must be filled with a numeric value and must be greater than Starting Number!");
+		alert("Ending Number must be filled in with a numeric value and must be greater than Starting Number!");
 		document.forms["myForm"]["endingNumber"].parentElement.className = "form-group has-error";
 		document.forms["myForm"]["endingNumber"].focus();
 		return false;
 	}
 
 	if(stepNumber == "" || isNaN(stepNumber) || stepNumber <= 0){
-		alert("Step Number must be filled with a numeric value and must be positive number!");
+		alert("Step Number must be filled in with a numeric value and must be positive number!");
 		document.forms["myForm"]["stepNumber"].parentElement.className = "form-group has-error";
 		document.forms["myForm"]["stepNumber"].focus();
 		return false;

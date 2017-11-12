@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Sum The Values In An Array</title>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+			
+			function sumOfRange(numbers){
+
+				var sum = 0;
+
+				for(var loopCounterPosition = 0; loopCounterPosition < numbers.length; loopCounterPosition++){
+					sum += numbers[loopCounterPosition];
+				}
+				return sum;
+			}
+
+			console.log(sumOfRange([1,2,3,4,5]) + "<br/>");
+			document.write(sumOfRange([1,2,3,4,5]) + "<br/>");
+
+			console.log(sumOfRange([17,77,9,33,7]) + "<br/>");
+			document.write(sumOfRange([17,77,9,33,7]) + "<br/>");
+
+		</script>
+
+	</body>
+</html>

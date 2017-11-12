@@ -97,7 +97,7 @@ If all fields are validated successfully, then we will show the results table wi
 
 // isNaN - The NaN (Not-a-Number) is a weirdo Global Object in javascript frequently returned when some mathematical operation failed
 // You wanted to check if NaN == null which results false . Hovewer even NaN == NaN results with false
-// A Simple way to find out if variable is NaN is an global function isNaN()
+// A Simple way to find out if variable is NaN is a global function isNaN()
 
 function validateItems(){
     clearErrors();
@@ -126,6 +126,9 @@ function validateItems(){
    document.getElementById("multiplyResult").innerText = num1 * num2;
    document.getElementById("divideResult").innerText = num1 / num2;
    document.getElementById("moduleResult").innerText = num1 % num2;
+
+    var sum = Number(num1) + Number(num2);
+    document.getElementById("squareRootResult").innerText = Math.sqrt(sum);
 
    // We are returning false so that the form doesn't submit and so that we can see the results
    

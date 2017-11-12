@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Refactoring Function Rolling Dice - Randomly Generated Numbers</title>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+			
+			function rollDice(minimum, maximum){
+				return Math.floor(Math.random() * (1 + maximum - minimum)) + minimum;
+			}
+
+			for(var rollCounter_loopCounter_position_index = 0; rollCounter_loopCounter_position_index < 10; rollCounter_loopCounter_position_index++){
+				document.write(rollDice(0, 1) + "<br/>");
+				document.write(rollDice(1, 4) + "<br/>");
+				document.write(rollDice(1, 6) + "<br/>");
+				document.write(rollDice(1, 10) + "<br/>");
+				document.write(rollDice(1, 20) + "<br/>");
+			}
+
+			// console.log(rollDice(0, 1));
+			// document.write(rollDice(1, 4) + "<br/>");
+			// document.write(rollDice(1, 6) + "<br/>");
+			// document.write(rollDice(1, 10) + "<br/>");
+			// document.write(rollDice(1, 20) + "<br/>");
+
+		</script>
+
+	</body>
+</html>
